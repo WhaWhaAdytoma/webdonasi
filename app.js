@@ -2,7 +2,7 @@ var http = require('http');
 var express = require('express');
 var path = require('path');
 
-var bukutamu = require('./routes/bukutamu');
+var webdonasi = require('./routes/webdonasi');
 var app =express();
 
 var conn = require('express-myconnection');
@@ -35,12 +35,12 @@ app.use(
 		},'single')
 	);
 
-app.get('/bukutamu',bukutamu.liatin);
-app.get('/bukutamu/tambah',bukutamu.tambah);
-app.post('/bukutamu/tambah',bukutamu.tambah_simpen);
-app.get('/bukutamu/ubah/:id',bukutamu.ubah);
-app.post('/bukutamu/ubah/:id',bukutamu.ubah_simpen);
-app.get('/bukutamu/hapus/:id',bukutamu.hapus);
+app.get('/webdonasi',webdonasi.liatin);
+app.get('/webdonasi/tambah',webdonasi.tambah);
+app.post('/webdonasi/tambah',webdonasi.tambah_simpen);
+app.get('/webdonasi/ubah/:id',webdonasi.ubah);
+app.post('/webdonasi/ubah/:id',webdonasi.ubah_simpen);
+app.get('/webdonasi/hapus/:id',webdonasi.hapus);
 
 app.use(app.router);
 
