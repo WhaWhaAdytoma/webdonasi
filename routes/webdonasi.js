@@ -10,13 +10,13 @@ exports.liatin = function(minta, kasihaja) {
 				console.log('error nya : %s',err);
 			};
 
-			kasihaja.render('bukutamu',{page_title:"Data BukuTamu",data:rows});
+			kasihaja.render('webdonasi',{page_title:"Data Campaign",data:rows});
 		});
 	})
 }
 
 exports.tambah = function(minta, kasihaja) {
-	kasihaja.render('add_guest',{page_title:"Add Campaign"});
+	kasihaja.render('add_campaign',{page_title:"Add Campaign"});
 }
 
 exports.tambah_simpen = function(minta, kasihaja) {
@@ -43,7 +43,7 @@ exports.tambah_simpen = function(minta, kasihaja) {
 				console.log("Gagal Input  ! :p Error Di : %s",err);
 			};
 
-			kasihaja.redirect('/bukutamu');
+			kasihaja.redirect('/webdonasi');
 		})
 
 	});
@@ -85,7 +85,7 @@ exports.ubah_simpen = function(minta, kasihaja) {
 				console.log("Gagal Update Coeg ! :p Error Di : %s",err);
 			};
 
-			kasihaja.redirect('/bukutamu');
+			kasihaja.redirect('/webdonasi');
 		})
 
 	});
@@ -103,7 +103,7 @@ exports.hapus = function(minta, kasihaja){
 				console.log("gagal delete coeg ! gara gara : %s",err);
 
 			};
-			kasihaja.redirect('/bukutamu');
+			kasihaja.redirect('/webdonasi');
 		});
 		})
 }
